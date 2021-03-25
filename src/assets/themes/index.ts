@@ -31,4 +31,15 @@ export default {
     input: '100px',
     card: '5px',
   },
+  cards: {
+    height: {
+      small: '325px',
+      large: '335px',
+    },
+    width: {
+      small: '250px',
+      medium: '350px',
+      large: '780px',
+    },
+  },
 };
