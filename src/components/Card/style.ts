@@ -5,7 +5,7 @@ import theme from '../../assets/themes';
 type CardProps = {
   width: string;
   height: string;
-}
+};
 
 export const Cardbox = styled.div<CardProps>`
   width: ${({ width }) => (width === 'small' ? theme.cards.width.small : theme.cards.width.large)};
