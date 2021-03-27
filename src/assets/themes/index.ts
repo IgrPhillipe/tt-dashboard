@@ -36,11 +36,10 @@ export default {
   cards: {
     height: {
       small: '325px',
-      large: '335px',
+      large: '670px',
     },
     width: {
-      small: '250px',
-      medium: '350px',
+      small: '375px',
       large: '780px',
     },
   },
