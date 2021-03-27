@@ -7,12 +7,34 @@ type SideBarProps = {
 }
 
 export const View = styled.div`
+  position: absolute;
   width: 100vw;
   height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+`;
+
+export const BarFunctions = styled.div`
+  width: 210px;
+
+  margin: 0;
+
+`;
+
+export const HomeContent = styled.div`
+  padding: 10px;
+`;
+
+export const Title = styled.h1`
+  color: ${theme.mainColors.darkGray};
+  font-size: ${theme.fonts.h1};
+
+  margin-left: 18px;
 `;
 
 export const Dock = styled.div`
-  position: absolute;
+  position: fixed;
 
   display: flex;
   justify-content: center;
@@ -50,15 +72,16 @@ export const MenuButton = styled.div`
 `;
 
 export const SideBar = styled.div<SideBarProps>`
-  position: absolute;
-
-  display: ${({ hide }) => (hide ? 'none' : 'block')};
+  display: ${({ hide }) => (hide ? 'none' : 'fixed')};
 
   margin-left: 40px;
 
   width: 170px;
-  height: 100vh;
-
   border-right: 1px solid #EBEBEB;
 `;
 
+export const Cards = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
