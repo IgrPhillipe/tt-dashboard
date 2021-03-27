@@ -6,6 +6,8 @@ export default {
     mediumGray: '#C4C4C4',
     lightGray: '#FAFAFA',
     green: '#7FC008',
+    textGray: '#B0B0B0',
+    secondaryGray: '#EBEBEB'
   },
   fonts: {
     h1: {
