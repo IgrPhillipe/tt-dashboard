@@ -1,9 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 
-const Card: React.FC = () => (
-  <>
-    <h1>Teste</h1>
-  </>
-);
+import { Cardbox } from './style';
+
+const Card: React.FC = () => {
+  return (
+    <>
+      <Cardbox width='large' height='small' >
+        <Header>
+
+        </Header>
+      </Cardbox>
+    </>
+  );
+};
 
 export default Card;
