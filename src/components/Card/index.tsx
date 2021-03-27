@@ -6,10 +6,17 @@ import {
 
 import Header from '../Header';
 
-const Card: React.FC = () => {
+export interface CardProps {
+  width: string;
+  height: string;
+}
+
+const Card: React.FC<CardProps> = ({
+  width, height,
+}: CardProps) => {
   return (
     <>
-      <Cardbox width='large' height='small' >
+      <Cardbox width={width} height={height} >
         <Header />
       </Cardbox>
     </>
