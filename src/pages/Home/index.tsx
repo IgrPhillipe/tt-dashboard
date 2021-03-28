@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { Menu, BarChart } from 'react-feather';
+import { Menu } from 'react-feather';
+import { Chart } from 'react-google-charts';
 
 import Header from '../../components/Header/index';
 import SideBarItem from '../../components/SideBarItem/index';
 import PeriodSelect from '../../components/PeriodSelect/index';
 import SearchBar from '../../components/SearchBar/intex';
 
+import { DataContext } from '../../dataContext';
+
 import {
-  View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn, Card, SelectBox, SearchBox
+  View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn, Card, SelectBox, SearchBox, ChartBox,
 } from './style';
 
 const Home: React.FC = () => {
@@ -41,6 +44,8 @@ const Home: React.FC = () => {
     title: 'Inspeções agendadas',
   });
 
+  const GlobalData: any = React.useContext(DataContext);
+  console.log(typeof (GlobalData.GlobalData.planned));
   return (
     <View>
       <BarFunctions hide={hide} >
@@ -61,6 +66,23 @@ const Home: React.FC = () => {
           <FirstColumm>
             <Card width='large' height='small' >
               <Header settings title={cardOne.title} />
+              <ChartBox>
+                <Chart
+                  width={'720px'}
+                  height={'250px'}
+                  chartType='ColumnChart'
+                  loader={<div>Loading</div>}
+                  data={[
+                    ['', '', ''],
+                    ['Planejados', GlobalData.GlobalData.planned, GlobalData.GlobalData.realized],
+                    ['Los Angeles, CA', 15, 12],
+                    ['Chicago, IL', 10, 12],
+                    ['Houston, TX', 1, 11],
+                    ['Philadelphia, PA', 17, 9],
+                  ]}
+                />
+
+              </ChartBox>
             </Card>
             <Card width='small' height='small' >
               <Header settings title={cardThree.title} subtitle={cardThree.subtitle} />
@@ -96,7 +118,7 @@ const Home: React.FC = () => {
           </SecondColumn>
         </Cards>
       </HomeContent>
-    </View>
+    </View >
   );
 };
 

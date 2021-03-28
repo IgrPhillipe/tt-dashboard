@@ -150,8 +150,6 @@ export const Card = styled.div<CardProps>`
   margin-right: ${theme.margins.right};
 
   position: relative;
-
-  justify-content: center;
 `;
 
 export const SelectBox = styled.div<SelectProps>`
@@ -176,4 +174,13 @@ export const SearchBox = styled.div<CardProps>`
   margin: 5px 0;
 
   width: ${({ width }) => (width === 'small' ? theme.cards.width.small : theme.cards.width.large)};
+`;
+
+export const ChartBox = styled.div`
+  width: 100%;
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

@@ -11,7 +11,7 @@ const SearchBar: React.FC = () => {
     <>
       <Input type='text' placeholder='Pesquise' onChange={(event) => { setText(event.target.value); }} />
       <IconBox type='submit'>
-        <Search width='15px' height='15px' cursor='pointer' onClick={() => console.log(text)} />
+        <Search width='15px' height='15px' cursor='pointer' onClick={() => console.log(new Date)} />
       </IconBox>
     </>
   );
