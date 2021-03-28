@@ -39,8 +39,6 @@ export const BarFunctions = styled.div<SideBarProps>`
 export const HomeContent = styled.div<SideBarProps>`
   padding: 10px 0 10px 0;
 
-  // left: ${({ hide }) => (hide ? '40px' : '80px')};
-
   transition: 0.5s;
 
   position: relative;
@@ -163,7 +161,6 @@ export const SelectBox = styled.div<SelectProps>`
   right: ${({ type }) => type === 'small' && 0};
 
   margin-right: ${({ type }) => type === 'small' && '15px'};
-  
 `;
 
 export const SearchBox = styled.div<CardProps>`
