@@ -8,15 +8,28 @@ import {
   Subtitle
 } from './style';
 
-const Header: React.FC = () => {
+export interface HeaderProps {
+  settings?: boolean;
+  title: string;
+  subtitle?: string;
+}
+
+const Header: React.FC<HeaderProps> = ({
+  settings, title, subtitle,
+}: HeaderProps) => {
   return (
     <>
       <Headerbox>
         <Top>
-          <Title>Histórico de eventos</Title>
-          <Settings cursor='pointer' onClick={() => console.log('click')} />
+          <Title>{title}</Title>
+          {settings && (
+            <Settings cursor='pointer' onClick={() => console.log('click')} />
+          )}
+
         </Top>
-        <Subtitle>Status do dia</Subtitle>
+        {subtitle && (
+          <Subtitle>{subtitle}</Subtitle>
+        )}
       </Headerbox>
     </>
   );
