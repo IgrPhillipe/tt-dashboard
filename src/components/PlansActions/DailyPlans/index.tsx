@@ -9,13 +9,13 @@ import {
   Card, ChartBox,
 } from './style';
 
-const DailyInspections: React.FC = () => {
+const DailyPlans: React.FC = () => {
   const { GlobalData: Data }: any = React.useContext(DataContext);
 
   return (
     <>
       <Card width='small' height='small' >
-        <Header settings title='Inspeções' subtitle='Status do dia' />
+        <Header settings title='Planos de Ação' subtitle='Status do dia' />
         <ChartBox>
           <Chart
             width={'335px'}
@@ -24,9 +24,9 @@ const DailyInspections: React.FC = () => {
             loader={<div>Loading</div>}
             data={[
               ['', '', ''],
-              ['Realizados', Data.inspections.realized, 0],
-              ['Não realizados', (Data.inspections.planned - Data.inspections.realized), 0],
-              ['Total', Data.inspections.planned, 0],
+              ['Realizados', Data.plans.closed, 0],
+              ['Não realizados', Data.plans.open, 0],
+              ['Total', (Data.plans.open + Data.plans.closed), 0],
             ]}
           />
 
@@ -37,4 +37,4 @@ const DailyInspections: React.FC = () => {
 
 };
 
-export default DailyInspections;
+export default DailyPlans;
