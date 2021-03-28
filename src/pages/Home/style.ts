@@ -8,22 +8,32 @@ type SideBarProps = {
 
 export const View = styled.div`
   position: absolute;
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
 
   display: flex;
   flex-direction: row;
 `;
 
-export const BarFunctions = styled.div`
-  width: 210px;
+export const BarFunctions = styled.div<SideBarProps>`
+  width: ${({ hide }) => (hide ? '40px' : '220px')};
+  height: 100vh;
+
+  transition: 0.5s;
 
   margin: 0;
-
 `;
 
-export const HomeContent = styled.div`
-  padding: 10px;
+export const HomeContent = styled.div<SideBarProps>`
+  padding: 10px 0 10px 0;
+
+  margin-left: 50px;
+
+  position: absolute;
+
+  left: ${({ hide }) => (hide ? '40px' : '220px')};
+
+  transition: 0.5s;
 `;
 
 export const Title = styled.h1`
@@ -72,16 +82,42 @@ export const MenuButton = styled.div`
 `;
 
 export const SideBar = styled.div<SideBarProps>`
-  display: ${({ hide }) => (hide ? 'none' : 'fixed')};
+  position: fixed;
 
   margin-left: 40px;
 
-  width: 170px;
+  width: ${({ hide }) => (hide ? 0 : '180px')};
+  height: 100%;
+
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  overflow-x: hidden;
+
+  transition: 0.5s;
+
   border-right: 1px solid #EBEBEB;
 `;
 
 export const Cards = styled.div`
   display: flex;
+`;
+
+export const FirstColumm = styled.div`
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 810px;
+`;
+
+export const SecondColumn = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+height: 1055px;
 `;
