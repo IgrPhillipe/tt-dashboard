@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme from '../../assets/themes';
 
 export const Box = styled.div`
+  width: 180px;
   height: 40px;
 
   display: flex;
