@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Chart } from 'react-google-charts';
 
 import { DataContext } from '../../dataContext';
@@ -13,14 +13,10 @@ import {
 const EventsHistory: React.FC = () => {
   const GlobalData: any = React.useContext(DataContext);
 
-  const [cardOne, setCardOne] = useState({
-    title: 'Histórico de eventos',
-  });
-
   return (
     <>
       <Card width='large' height='small' >
-        <Header settings title={cardOne.title} />
+        <Header settings title='Histórico de Eventos' />
         <SelectBox>
           <PeriodSelect width='small' />
         </SelectBox>
