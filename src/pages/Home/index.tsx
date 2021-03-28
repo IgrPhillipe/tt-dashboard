@@ -3,7 +3,10 @@ import { Menu } from 'react-feather';
 
 import EventsHistory from '../../components/EventsHistory/index';
 import DailyInspections from '../../components/Inspections/DailyInspections/index';
-import DailyPlans from '../../components/PlansActions/DailyPlans/index';
+import DailyPlans from '../../components/ActionsPlans/DailyPlans/index';
+import ScheduledInspections from '../../components/Inspections/ScheduledInspections/index';
+import PlansOvewview from '../../components/ActionsPlans/Overview/index';
+
 
 import Header from '../../components/Header/index';
 import SideBarItem from '../../components/SideBarItem/index';
@@ -24,23 +27,9 @@ const Home: React.FC = () => {
     subtitle: 'visão geral',
   });
 
-  const [cardThree, setCardThree] = useState({
-    title: 'Inspeções',
-    subtitle: 'status do dia',
-  });
-
-  const [cardFour, setCardFour] = useState({
-    title: 'Plano de ação',
-    subtitle: 'status do dia',
-  });
-
   const [cardFive, setCardFive] = useState({
     title: 'Planos de ação',
     subtitle: 'atualizações',
-  });
-
-  const [cardSix, setCardSix] = useState({
-    title: 'Inspeções agendadas',
   });
 
   const GlobalData: any = React.useContext(DataContext);
@@ -67,24 +56,12 @@ const Home: React.FC = () => {
             <EventsHistory />
             <DailyInspections />
             <DailyPlans />
-
-            <Card width='large' height='small'  >
-              <Header title={cardSix.title} />
-
-              <SelectBox type='small'>
-                <PeriodSelect width='small' />
-              </SelectBox>
-              <SearchBox width='large' height='small'>
-                <SearchBar />
-              </SearchBox>
-            </Card>
+            <ScheduledInspections />
 
           </FirstColumm>
 
           <SecondColumn>
-            <Card width='small' height='small' >
-              <Header settings title={cardTwo.title} subtitle={cardTwo.subtitle} />
-            </Card>
+            <PlansOvewview />
 
             <Card width='small' height='large' >
               <Header settings title={cardFive.title} subtitle={cardFive.subtitle} />
