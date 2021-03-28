@@ -6,10 +6,20 @@ type SideBarProps = {
   hide: boolean;
 }
 
+type CardProps = {
+  width: string;
+  height: string;
+};
+
+type SelectProps = {
+  type: string;
+}
+
 export const View = styled.div`
-  position: absolute;
   width: 90vw;
   height: 100vh;
+
+  position: absolute;
 
   display: flex;
   flex-direction: row;
@@ -17,7 +27,9 @@ export const View = styled.div`
 
 export const BarFunctions = styled.div<SideBarProps>`
   width: ${({ hide }) => (hide ? '40px' : '220px')};
-  height: 100vh;
+  height: 150vh;
+
+  position: relative;
 
   transition: 0.5s;
 
@@ -27,13 +39,11 @@ export const BarFunctions = styled.div<SideBarProps>`
 export const HomeContent = styled.div<SideBarProps>`
   padding: 10px 0 10px 0;
 
-  margin-left: 50px;
-
-  position: absolute;
-
-  left: ${({ hide }) => (hide ? '40px' : '220px')};
+  // left: ${({ hide }) => (hide ? '40px' : '80px')};
 
   transition: 0.5s;
+
+  position: relative;
 `;
 
 export const Title = styled.h1`
@@ -44,7 +54,7 @@ export const Title = styled.h1`
 `;
 
 export const Dock = styled.div`
-  position: fixed;
+  position: absolute;
 
   display: flex;
   justify-content: center;
@@ -53,7 +63,7 @@ export const Dock = styled.div`
   left: 0;
 
   width: 40px;
-  height: 100vh;
+  height: 150vh;
 
   background: linear-gradient(180deg, #0DB2D6 8.12%, #4FDA91 71.62%);
 `;
@@ -82,7 +92,7 @@ export const MenuButton = styled.div`
 `;
 
 export const SideBar = styled.div<SideBarProps>`
-  position: fixed;
+  position: relative;
 
   margin-left: 40px;
 
@@ -120,4 +130,50 @@ flex-direction: column;
 justify-content: space-between;
 
 height: 1055px;
+`;
+
+export const Card = styled.div<CardProps>`
+  width: ${({ width }) => (width === 'small' ? theme.cards.width.small : theme.cards.width.large)};
+  height: ${({ height }) => (height === 'small' ? theme.cards.height.small : theme.cards.height.large)};
+
+  background-color: ${theme.mainColors.white};
+
+  border-radius: ${theme.borderRadius.card};
+  border-color:  0.5px solid #E4E4E4;
+
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+  margin-top: ${theme.margins.top};
+  margin-bottom: ${theme.margins.bottom};
+  margin-left: ${theme.margins.left};
+  margin-right: ${theme.margins.right};
+
+  position: relative;
+
+  justify-content: center;
+`;
+
+export const SelectBox = styled.div<SelectProps>`
+  position: ${({ type }) => type === 'small' && 'absolute'};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: ${({ type }) => type === 'small' ? '15px' : '80px'};
+  right: ${({ type }) => type === 'small' && 0};
+
+  margin-right: ${({ type }) => type === 'small' && '15px'};
+  
+`;
+
+export const SearchBox = styled.div<CardProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px 0;
+
+  width: ${({ width }) => (width === 'small' ? theme.cards.width.small : theme.cards.width.large)};
 `;

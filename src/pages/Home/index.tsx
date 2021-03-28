@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Menu, BarChart } from 'react-feather';
 
-import Card from '../../components/Card/index';
+import Header from '../../components/Header/index';
 import SideBarItem from '../../components/SideBarItem/index';
+import PeriodSelect from '../../components/PeriodSelect/index';
+import SearchBar from '../../components/SearchBar/intex';
 
 import {
-  View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn,
+  View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn, Card, SelectBox, SearchBox
 } from './style';
 
 const Home: React.FC = () => {
@@ -57,14 +59,40 @@ const Home: React.FC = () => {
 
         <Cards>
           <FirstColumm>
-            <Card width='large' height='small' settings title={cardOne.title} />
-            <Card width='small' height='small' settings title={cardThree.title} subtitle={cardThree.subtitle} />
-            <Card width='small' height='small' settings title={cardFour.title} subtitle={cardFour.subtitle} />
-            <Card width='large' height='small' title={cardSix.title} />
+            <Card width='large' height='small' >
+              <Header settings title={cardOne.title} />
+            </Card>
+            <Card width='small' height='small' >
+              <Header settings title={cardThree.title} subtitle={cardThree.subtitle} />
+            </Card>
+            <Card width='small' height='small' >
+              <Header settings title={cardFour.title} subtitle={cardFour.subtitle} />
+            </Card>
+            <Card width='large' height='small'  >
+              <Header title={cardSix.title} />
+
+              <SelectBox type='small'>
+                <PeriodSelect width='small' />
+              </SelectBox>
+              <SearchBox width='large' height='small'>
+                <SearchBar />
+              </SearchBox>
+            </Card>
           </FirstColumm>
           <SecondColumn>
-            <Card width='small' height='small' settings title={cardTwo.title} subtitle={cardTwo.subtitle} />
-            <Card width='small' height='large' settings title={cardFive.title} subtitle={cardFive.subtitle} />
+            <Card width='small' height='small' >
+              <Header settings title={cardTwo.title} subtitle={cardTwo.subtitle} />
+            </Card>
+
+            <Card width='small' height='large' >
+              <Header settings title={cardFive.title} subtitle={cardFive.subtitle} />
+              <SearchBox width='small' height='large'>
+                <SearchBar />
+              </SearchBox>
+              <SelectBox type='large' >
+                <PeriodSelect width='large' />
+              </SelectBox>
+            </Card>
           </SecondColumn>
         </Cards>
       </HomeContent>
