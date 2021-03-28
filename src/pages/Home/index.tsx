@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Menu } from 'react-feather';
-import { Chart } from 'react-google-charts';
 
 import EventsHistory from '../../components/EventsHistory/index';
 import DailyInspections from '../../components/Inspections/DailyInspections/index';
+import DailyPlans from '../../components/PlansActions/DailyPlans/index';
 
 import Header from '../../components/Header/index';
 import SideBarItem from '../../components/SideBarItem/index';
@@ -66,14 +66,7 @@ const Home: React.FC = () => {
           <FirstColumm>
             <EventsHistory />
             <DailyInspections />
-
-            {/*             <Card width='small' height='small' >
-              <Header settings title={cardThree.title} subtitle={cardThree.subtitle} />
-            </Card> */}
-
-            <Card width='small' height='small' >
-              <Header settings title={cardFour.title} subtitle={cardFour.subtitle} />
-            </Card>
+            <DailyPlans />
 
             <Card width='large' height='small'  >
               <Header title={cardSix.title} />
