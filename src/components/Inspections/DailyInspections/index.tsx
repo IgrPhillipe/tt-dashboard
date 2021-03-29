@@ -1,13 +1,16 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 
+import theme from '../../../assets/themes';
+
 import { DataContext } from '../../../dataContext';
 
-import { Header } from '../../index';
+import { Header, ChartLegend } from '../../index';
 
 import {
   Card,
   ChartBox,
+  Legend
 } from './style';
 
 const DailyInspections: React.FC = () => {
@@ -19,7 +22,11 @@ const DailyInspections: React.FC = () => {
         <Header settings title='Inspeções' subtitle='Status do dia' />
         <ChartBox>
           <Chart
-            width={'335px'}
+            options={{
+              legend: 'none',
+              colors: [`${theme.mainColors.green}`, `${theme.mainColors.red}`, `${theme.mainColors.orange}`]
+            }}
+            width={'270px'}
             height={'250px'}
             chartType='PieChart'
             loader={<div>Loading</div>}
@@ -30,8 +37,12 @@ const DailyInspections: React.FC = () => {
               ['Total', Data.inspections.planned, 0],
             ]}
           />
-
         </ChartBox>
+        <Legend>
+          <ChartLegend legend='Realizados' color='green' />
+          <ChartLegend legend='Não realizados' color='red' />
+          <ChartLegend legend='Total' color='orange' />
+        </Legend>
       </Card>
     </>
   );

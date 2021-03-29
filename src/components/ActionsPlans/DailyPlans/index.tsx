@@ -1,13 +1,16 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 
+import theme from '../../../assets/themes';
+
 import { DataContext } from '../../../dataContext';
 
-import { Header } from '../../index';
+import { Header, ChartLegend } from '../../index';
 
 import {
   Card,
   ChartBox,
+  Legend
 } from './style';
 
 const DailyPlans: React.FC = () => {
@@ -19,7 +22,11 @@ const DailyPlans: React.FC = () => {
         <Header settings title='Planos de Ação' subtitle='Status do dia' />
         <ChartBox>
           <Chart
-            width={'335px'}
+            options={{
+              legend: 'none',
+              colors: [`${theme.mainColors.green}`, `${theme.mainColors.red}`, `${theme.mainColors.orange}`]
+            }}
+            width={'270px'}
             height={'250px'}
             chartType='PieChart'
             loader={<div>Loading</div>}
@@ -30,8 +37,12 @@ const DailyPlans: React.FC = () => {
               ['Total', (Data.plans.open + Data.plans.closed), 0],
             ]}
           />
-
         </ChartBox>
+        <Legend>
+          <ChartLegend legend='Realizados' value='40' color='green' />
+          <ChartLegend legend='Não realizados' value='50' color='red' />
+          <ChartLegend legend='Total' value='10' color='orange' />
+        </Legend>
       </Card>
     </>
   );

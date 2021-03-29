@@ -7,7 +7,9 @@ export default {
     lightGray: '#FAFAFA',
     green: '#7FC008',
     textGray: '#B0B0B0',
-    secondaryGray: '#EBEBEB'
+    secondaryGray: '#EBEBEB',
+    orange: '#DB8C28',
+    red: '#EB5757',
   },
   fonts: {
     h1: {

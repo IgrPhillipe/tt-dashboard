@@ -9,3 +9,4 @@ export { default as PeriodSelect } from './PeriodSelect/index';
 export { default as SearchBar } from './SearchBar/intex';
 export { default as SideBarItem } from './SideBarItem/index';
 export { default as Tag } from './Tag/index';
+export { default as ChartLegend } from './ChartLegend/index';

@@ -32,6 +32,7 @@ export const ChartBox = styled.div`
   height: 80%;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -45,4 +46,19 @@ export const SelectBox = styled.div`
 
   top: 10px;
   right: 60px;
+`;
+
+export const Legend = styled.div`
+  position: absolute;
+
+  top: 270px;
+  left: 350px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
 `;

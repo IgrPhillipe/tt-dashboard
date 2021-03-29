@@ -3,12 +3,13 @@ import { Chart } from 'react-google-charts';
 
 import { DataContext } from '../../dataContext';
 
-import { Header, PeriodSelect } from '../index';
+import { Header, PeriodSelect, ChartLegend } from '../index';
 
 import {
   Card,
   ChartBox,
-  SelectBox
+  SelectBox,
+  Legend
 } from './style';
 
 const EventsHistory: React.FC = () => {
@@ -23,6 +24,9 @@ const EventsHistory: React.FC = () => {
         </SelectBox>
         <ChartBox>
           <Chart
+            options={{
+              colors: ['#7FC008', '#DB8C28'],
+            }}
             width={'720px'}
             height={'250px'}
             chartType='ColumnChart'
@@ -36,8 +40,11 @@ const EventsHistory: React.FC = () => {
               ['Sexta', GlobalData.GlobalData.inspections.total.sunday, GlobalData.GlobalData.plans.total.sunday],
             ]}
           />
-
         </ChartBox>
+        <Legend>
+          <ChartLegend legend='Inspeções realizadas' color='green' />
+          <ChartLegend legend='Planos de Ação criados' color='orange' />
+        </Legend>
       </Card>
     </>
   );

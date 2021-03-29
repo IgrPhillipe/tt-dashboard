@@ -1,9 +1,11 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 
+import theme from '../../../assets/themes';
+
 import { DataContext } from '../../../dataContext';
 
-import { Header } from '../../index';
+import { Header, ChartLegend } from '../../index';
 
 import {
   Card,
@@ -19,7 +21,11 @@ const PlansOverview: React.FC = () => {
         <Header settings title='Planos de Ação' subtitle='Visão Geral' />
         <ChartBox>
           <Chart
-            width={'335px'}
+            options={{
+              legend: 'none',
+              colors: [`${theme.mainColors.green}`, `${theme.mainColors.red}`, `${theme.mainColors.orange}`]
+            }}
+            width={'270px'}
             height={'250px'}
             chartType='PieChart'
             loader={<div>Loading</div>}

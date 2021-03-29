@@ -28,12 +28,30 @@ export const Card = styled.div<CardProps>`
 `;
 
 export const ChartBox = styled.div`
-  width: 100%;
   height: 80%;
 
   padding-top: 20px;
 
+  position: absolute;
+
+  left: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const Legend = styled.div`
+  position: absolute;
+
+  top: 130px;
+  left: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 100px;
 `;
