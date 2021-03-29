@@ -2,10 +2,7 @@ import React from 'react';
 
 import { DataContext } from '../../../dataContext';
 
-import Header from '../../Header/index';
-import PeriodSelect from '../../PeriodSelect/index';
-import SearchBar from '../../SearchBar/intex';
-import Tag from '../../Tag/index';
+import { Header, PeriodSelect, SearchBar, Tag } from '../../index';
 
 import {
   Card,

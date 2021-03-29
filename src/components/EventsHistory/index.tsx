@@ -3,8 +3,7 @@ import { Chart } from 'react-google-charts';
 
 import { DataContext } from '../../dataContext';
 
-import Header from '../Header/index';
-import PeriodSelect from '../PeriodSelect/index';
+import { Header, PeriodSelect } from '../index';
 
 import {
   Card,

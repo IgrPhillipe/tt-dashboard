@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Menu } from 'react-feather';
 
-import EventsHistory from '../../components/EventsHistory/index';
-import DailyInspections from '../../components/Inspections/DailyInspections/index';
-import DailyPlans from '../../components/ActionsPlans/DailyPlans/index';
-import ScheduledInspections from '../../components/Inspections/ScheduledInspections/index';
-import PlansOvewview from '../../components/ActionsPlans/Overview/index';
-import PlansUpdates from '../../components/ActionsPlans/Updates/index';
-
-import SideBarItem from '../../components/SideBarItem/index';
+import {
+  EventsHistory,
+  DailyInspections,
+  DailyPlans,
+  ScheduledInspections,
+  PlansOverview,
+  PlansUpdates,
+  SideBarItem
+} from '../../components/index';
 
 import {
   View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn
@@ -47,7 +48,7 @@ const Home: React.FC = () => {
           </FirstColumm>
 
           <SecondColumn>
-            <PlansOvewview />
+            <PlansOverview />
             <PlansUpdates />
           </SecondColumn>
 

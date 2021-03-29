@@ -1,5 +1,11 @@
-import Header from './Header/index';
-
-export default {
-  Header,
-};
+export { default as DailyPlans } from './ActionsPlans/DailyPlans/index';
+export { default as PlansOverview } from './ActionsPlans/Overview/index';
+export { default as PlansUpdates } from './ActionsPlans/Updates/index';
+export { default as EventsHistory } from './EventsHistory/index';
+export { default as Header } from './Header/index';
+export { default as DailyInspections } from './Inspections/DailyInspections/index';
+export { default as ScheduledInspections } from './Inspections/ScheduledInspections/index';
+export { default as PeriodSelect } from './PeriodSelect/index';
+export { default as SearchBar } from './SearchBar/intex';
+export { default as SideBarItem } from './SideBarItem/index';
+export { default as Tag } from './Tag/index';

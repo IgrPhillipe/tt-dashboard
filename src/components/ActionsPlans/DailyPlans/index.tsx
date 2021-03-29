@@ -3,7 +3,7 @@ import { Chart } from 'react-google-charts';
 
 import { DataContext } from '../../../dataContext';
 
-import Header from '../../Header/index';
+import { Header } from '../../index';
 
 import {
   Card,
