@@ -17,7 +17,7 @@ const PeriodSelect: React.FC<SelectProps> = ({
       <Selectbox>
         <Select width={width}>
           <option>Diário</option>
-          <option>Semanal</option>
+          <option selected >Semanal</option>
           <option>Mensal</option>
         </Select>
       </Selectbox>

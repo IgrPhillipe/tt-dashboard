@@ -25,6 +25,8 @@ export const Select = styled.select<InputProps>`
   padding: 0 10px;
 
   font-weight: bold;
+
+  color: ${theme.mainColors.darkGray};
   
   cursor: pointer;
 `;

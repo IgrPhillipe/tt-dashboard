@@ -27,13 +27,11 @@ export const View = styled.div`
 
 export const BarFunctions = styled.div<SideBarProps>`
   width: ${({ hide }) => (hide ? '40px' : '220px')};
-  height: 150vh;
+  height: 200vh;
 
   position: relative;
 
   transition: 0.5s;
-
-  margin: 0;
 `;
 
 export const HomeContent = styled.div<SideBarProps>`
@@ -42,6 +40,8 @@ export const HomeContent = styled.div<SideBarProps>`
   transition: 0.5s;
 
   position: relative;
+
+  margin-left: 30px;
 `;
 
 export const Title = styled.h1`
@@ -61,7 +61,7 @@ export const Dock = styled.div`
   left: 0;
 
   width: 40px;
-  height: 150vh;
+  height: 200vh;
 
   background: linear-gradient(180deg, #0DB2D6 8.12%, #4FDA91 71.62%);
 `;

@@ -1,16 +1,11 @@
-import React, { useState, createContext } from 'react';
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React, { createContext } from 'react';
 
 import { inspections, plans } from './data.json';
 
 export const DataContext = createContext({});
 
-export const DataProvider = (props: any) => {
-  const [inspectionsPlanned, setInspectionsPlanned] = useState(0);
-  const [inspectionsRealized, setInspectionsRealized] = useState(0);
-  const [inspectionsCounter, setInspectionsCounter] = useState({});
-  const [plansCounter, setPlansCounter] = useState({});
-  const [plansOpened, setPlansOpened] = useState(0);
-  const [plansClosed, setPLansClosed] = useState(0);
+export const DataProvider = (props: { children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
   let countPlanned = 0;
   let countRealized = 0;
   let countOpened = 0;
