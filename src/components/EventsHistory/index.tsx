@@ -1,6 +1,8 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 
+import theme from '../../assets/themes/index';
+
 import { DataContext } from '../../dataContext';
 
 import { Header, PeriodSelect, ChartLegend } from '../index';
@@ -25,7 +27,8 @@ const EventsHistory: React.FC = () => {
         <ChartBox>
           <Chart
             options={{
-              colors: ['#7FC008', '#DB8C28'],
+              legend: 'none',
+              colors: [`${theme.mainColors.green}`, `${theme.mainColors.red}`, `${theme.mainColors.orange}`]
             }}
             width={'720px'}
             height={'250px'}
