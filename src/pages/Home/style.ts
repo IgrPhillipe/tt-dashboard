@@ -6,15 +6,6 @@ type SideBarProps = {
   hide: boolean;
 }
 
-type CardProps = {
-  width: string;
-  height: string;
-};
-
-type SelectProps = {
-  type: string;
-}
-
 export const View = styled.div`
   display: flex;
   justify-content: flex-start;
