@@ -11,7 +11,6 @@ export const DataProvider = (props: any) => {
   const [plansCounter, setPlansCounter] = useState({});
   const [plansOpened, setPlansOpened] = useState(0);
   const [plansClosed, setPLansClosed] = useState(0);
-
   let countPlanned = 0;
   let countRealized = 0;
   let countOpened = 0;
