@@ -16,30 +16,30 @@ type SelectProps = {
 }
 
 export const View = styled.div`
-  width: 90vw;
-  height: 100vh;
-
-  position: absolute;
-
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
+
+  width: 90vw;
+  height: 330vh;
 `;
 
 export const BarFunctions = styled.div<SideBarProps>`
   width: ${({ hide }) => (hide ? '40px' : '220px')};
-  height: 200vh;
+  height: 100%;
 
   position: relative;
 
   transition: 0.5s;
+
+  margin-right: 30px;
 `;
 
 export const HomeContent = styled.div<SideBarProps>`
   padding: 10px 0 10px 0;
 
-  transition: 0.5s;
+  width: 100%;
 
-  position: relative;
+  transition: 0.5s;
 
   margin-left: 30px;
 `;
@@ -61,7 +61,7 @@ export const Dock = styled.div`
   left: 0;
 
   width: 40px;
-  height: 200vh;
+  height: 100%;
 
   background: linear-gradient(180deg, #0DB2D6 8.12%, #4FDA91 71.62%);
 `;
@@ -110,14 +110,17 @@ export const SideBar = styled.div<SideBarProps>`
 
 export const Cards = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  width: 100%;
 `;
 
 export const FirstColumm = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 
   width: 810px;
 `;
