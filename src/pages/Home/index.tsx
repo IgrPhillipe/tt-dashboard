@@ -8,15 +8,10 @@ import ScheduledInspections from '../../components/Inspections/ScheduledInspecti
 import PlansOvewview from '../../components/ActionsPlans/Overview/index';
 import PlansUpdates from '../../components/ActionsPlans/Updates/index';
 
-
-import Header from '../../components/Header/index';
 import SideBarItem from '../../components/SideBarItem/index';
-import PeriodSelect from '../../components/PeriodSelect/index';
-import SearchBar from '../../components/SearchBar/intex';
-
 
 import {
-  View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn, Card, SelectBox, SearchBox, ChartBox,
+  View, BarFunctions, HomeContent, Title, Dock, MenuButton, SideBar, Cards, FirstColumm, SecondColumn
 } from './style';
 
 const Home: React.FC = () => {
@@ -24,15 +19,19 @@ const Home: React.FC = () => {
 
   return (
     <View>
+
       <BarFunctions hide={hide} >
+
         <Dock>
           <MenuButton onClick={() => setHide(!hide)} >
             <Menu width='15px' height='15px' />
           </MenuButton>
         </Dock>
+
         <SideBar hide={hide}>
           <SideBarItem />
         </SideBar>
+
       </BarFunctions>
 
       <HomeContent hide={hide} >

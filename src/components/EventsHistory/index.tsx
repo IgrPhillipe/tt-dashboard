@@ -7,7 +7,9 @@ import Header from '../Header/index';
 import PeriodSelect from '../PeriodSelect/index';
 
 import {
-  Card, ChartBox, SelectBox
+  Card,
+  ChartBox,
+  SelectBox
 } from './style';
 
 const EventsHistory: React.FC = () => {

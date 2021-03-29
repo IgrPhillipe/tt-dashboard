@@ -6,7 +6,8 @@ import { DataContext } from '../../../dataContext';
 import Header from '../../Header/index';
 
 import {
-  Card, ChartBox,
+  Card,
+  ChartBox,
 } from './style';
 
 const DailyPlans: React.FC = () => {

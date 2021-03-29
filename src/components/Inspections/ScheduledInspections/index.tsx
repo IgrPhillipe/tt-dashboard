@@ -7,7 +7,20 @@ import PeriodSelect from '../../PeriodSelect/index';
 import SearchBar from '../../SearchBar/intex';
 
 import {
-  Card, SelectBox, SearchBox, Table, TableLegend, Name, Planned, Realized, LastUpdate, TableItem, NameItem, PlannedItem, RealizedItem, LastUpdateItem
+  Card,
+  SelectBox,
+  SearchBox,
+  Table,
+  TableLegend,
+  Name,
+  Planned,
+  Realized,
+  LastUpdate,
+  TableItem,
+  NameItem,
+  PlannedItem,
+  RealizedItem,
+  LastUpdateItem
 } from './style';
 
 const ScheduledInspections: React.FC = () => {

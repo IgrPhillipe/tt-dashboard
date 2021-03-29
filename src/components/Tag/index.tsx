@@ -19,5 +19,4 @@ const Tag: React.FC<TagProps> = ({
   );
 };
 
-
 export default Tag;

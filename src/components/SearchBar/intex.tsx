@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Search } from 'react-feather';
 
 import {
-  Input, IconBox
+  Input,
+  IconBox
 } from './style';
 
 const SearchBar: React.FC = () => {

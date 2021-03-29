@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {
-  Selectbox, Select,
+  Selectbox,
+  Select,
 } from './style';
 
 type SelectProps = {

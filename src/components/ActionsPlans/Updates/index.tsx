@@ -8,7 +8,15 @@ import SearchBar from '../../SearchBar/intex';
 import Tag from '../../Tag/index';
 
 import {
-  Card, SelectBox, SearchBox, Table, TableItem, Top, Bottom, Title, Subtitle
+  Card,
+  SelectBox,
+  SearchBox,
+  Table,
+  TableItem,
+  Top,
+  Bottom,
+  Title,
+  Subtitle
 } from './style';
 
 const PlansUpdates: React.FC = () => {

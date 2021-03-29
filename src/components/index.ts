@@ -1,5 +1,5 @@
-import Card from './Card/index';
+import Header from './Header/index';
 
 export default {
-  Card,
+  Header,
 };

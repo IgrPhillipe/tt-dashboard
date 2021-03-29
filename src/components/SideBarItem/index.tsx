@@ -2,7 +2,8 @@ import React from 'react';
 import { BarChart } from 'react-feather';
 
 import {
-  Box, Title
+  Box,
+  Title
 } from './style';
 
 const SideBarItem: React.FC = () => {

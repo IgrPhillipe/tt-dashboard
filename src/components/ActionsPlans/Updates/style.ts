@@ -13,7 +13,6 @@ type SelectProps = {
 
 export const Card = styled.div<CardProps>`
   width: ${({ width }) => (width === 'small' ? theme.cards.width.small : theme.cards.width.large)};
-  height: ${({ height }) => (height === 'small' ? theme.cards.height.small : theme.cards.height.large)};
 
   background-color: ${theme.mainColors.white};
 
